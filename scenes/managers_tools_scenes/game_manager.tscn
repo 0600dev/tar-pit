@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=3 uid="uid://duqbg1s22ey5j"]
+
+[ext_resource type="Script" path="res://scripts/managers_tools_scripts/game_manager.gd" id="1_6u6xc"]
+[ext_resource type="Resource" uid="uid://b4xpnalng5v4p" path="res://dialogue/main.dialogue" id="2_jp4c6"]
+[ext_resource type="Texture2D" uid="uid://yelpgqh85t5" path="res://sprites/ui_sprites/new_background_ui_tarpit.png" id="3_5b1ne"]
+[ext_resource type="Texture2D" uid="uid://bvpuk8aqmckeo" path="res://sprites/ui_sprites/new_inventory_tarpit.png" id="4_1bhyj"]
+[ext_resource type="PackedScene" uid="uid://dobwjiexkgmaq" path="res://scenes/objects_buildings_scenes/coin_purse_item.tscn" id="5_snvn0"]
+[ext_resource type="PackedScene" uid="uid://b2pi2ycot5jej" path="res://scenes/objects_buildings_scenes/paddle_doll_item.tscn" id="6_htwea"]
+[ext_resource type="PackedScene" uid="uid://bm35ab0ss2yko" path="res://scenes/objects_buildings_scenes/sword_shotel_item.tscn" id="7_jlcil"]
+[ext_resource type="PackedScene" uid="uid://dsolew14ef7e4" path="res://scenes/objects_buildings_scenes/sword_takoba_item.tscn" id="8_j4hht"]
+[ext_resource type="PackedScene" uid="uid://cn344kl4bkdgr" path="res://scenes/objects_buildings_scenes/water_gourd_item.tscn" id="9_hj15s"]
+[ext_resource type="PackedScene" uid="uid://w6ebfwnpo6ju" path="res://scenes/objects_buildings_scenes/portrait_pic.tscn" id="10_46p8o"]
+[ext_resource type="Texture2D" uid="uid://cp33wq04g4ey5" path="res://sprites/ui_sprites/new_portrait_tarpit.png" id="11_gtpdr"]
+[ext_resource type="PackedScene" uid="uid://bm88uoq47fttf" path="res://scenes/managers_tools_scenes/scene_manager.tscn" id="12_k05up"]
+
+[node name="game_manager" type="Node2D"]
+visibility_layer = 4
+script = ExtResource("1_6u6xc")
+dialogue_resource = ExtResource("2_jp4c6")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="background" type="CanvasLayer" parent="CanvasGroup"]
+layer = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/background"]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("3_5b1ne")
+centered = false
+
+[node name="inventory" type="CanvasLayer" parent="CanvasGroup"]
+layer = -2
+
+[node name="carpet" type="Sprite2D" parent="CanvasGroup/inventory"]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("4_1bhyj")
+centered = false
+
+[node name="items" type="Node2D" parent="CanvasGroup/inventory" groups=["items"]]
+
+[node name="coin_purse" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("5_snvn0")]
+offset_left = 96.0
+offset_top = 600.0
+offset_right = 157.0
+offset_bottom = 645.0
+
+[node name="paddle_doll" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("6_htwea")]
+offset_left = 213.0
+offset_top = 592.0
+offset_right = 283.0
+offset_bottom = 692.0
+rotation = -0.628319
+
+[node name="sword_shotel" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("7_jlcil")]
+offset_left = 96.0
+offset_top = 728.0
+offset_right = 233.0
+offset_bottom = 799.0
+rotation = 0.671952
+
+[node name="sword_takoba" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("8_j4hht")]
+offset_left = 248.0
+offset_top = 720.0
+offset_right = 303.0
+offset_bottom = 861.0
+
+[node name="water_gourd" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("9_hj15s")]
+offset_left = 168.0
+offset_top = 672.0
+offset_right = 210.0
+offset_bottom = 729.0
+
+[node name="dialogue" type="CanvasLayer" parent="CanvasGroup"]
+layer = -2
+
+[node name="portrait" type="CanvasLayer" parent="CanvasGroup"]
+layer = -2
+
+[node name="portrait_pic" parent="CanvasGroup/portrait" instance=ExtResource("10_46p8o")]
+position = Vector2(51.075, 51.37)
+scale = Vector2(3.198, 3.197)
+
+[node name="portrait_frame" type="Sprite2D" parent="CanvasGroup/portrait"]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("11_gtpdr")
+centered = false
+
+[node name="game_container" type="CanvasLayer" parent="CanvasGroup"]
+layer = -2
+follow_viewport_enabled = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasGroup/game_container"]
+offset_left = 384.0
+offset_top = 48.0
+offset_right = 1216.0
+offset_bottom = 672.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasGroup/game_container/SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(832, 624)
+render_target_update_mode = 4
+
+[node name="game_manager" parent="CanvasGroup/game_container/SubViewportContainer/SubViewport" instance=ExtResource("12_k05up")]
+scale = Vector2(0.65, 0.65)
+
+[node name="orb_scene_change" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 648.0
+offset_top = 136.0
+offset_right = 712.0
+offset_bottom = 200.0
+
+[connection signal="pressed" from="CanvasGroup/inventory/items/coin_purse" to="." method="_on_coin_purse_pressed"]
+[connection signal="pressed" from="CanvasGroup/inventory/items/paddle_doll" to="." method="_on_paddle_doll_pressed"]
+[connection signal="pressed" from="CanvasGroup/inventory/items/sword_shotel" to="." method="_on_sword_shotel_pressed"]
+[connection signal="pressed" from="CanvasGroup/inventory/items/sword_takoba" to="." method="_on_sword_takoba_pressed"]
+[connection signal="pressed" from="CanvasGroup/inventory/items/water_gourd" to="." method="_on_water_gourd_pressed"]
+[connection signal="gui_input" from="orb_scene_change" to="." method="_on_orb_scene_change_gui_input"]

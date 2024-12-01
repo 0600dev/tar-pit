@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckdw6bgpxc0fm"]
+
+[ext_resource type="Texture2D" uid="uid://bwfd68jc4y5xm" path="res://sprites/locations/desert_etc_tarpit.png" id="1_agj3q"]
+[ext_resource type="Texture2D" uid="uid://cvmkeb1ca6y30" path="res://sprites/people_sprites/captain_tarpit.png" id="2_3c60a"]
+[ext_resource type="Texture2D" uid="uid://c3fxxcbrjx80a" path="res://sprites/people_sprites/kash_tarpit.png" id="3_kvpqu"]
+[ext_resource type="Texture2D" uid="uid://cdqgo3ui20h26" path="res://sprites/objects_sprites/plant_1_tarpit.png" id="4_nsomb"]
+[ext_resource type="Texture2D" uid="uid://cyrb1pngvuf6b" path="res://sprites/objects_sprites/plant_2_tarpit.png" id="4_ra5tj"]
+
+[node name="desert_etc_scene" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("1_agj3q")
+centered = false
+
+[node name="people" type="Node2D" parent="."]
+
+[node name="captain" type="Sprite2D" parent="people"]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("2_3c60a")
+centered = false
+
+[node name="kash" type="Sprite2D" parent="people"]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("3_kvpqu")
+centered = false
+
+[node name="plants" type="Node2D" parent="."]
+
+[node name="plant_1" type="Sprite2D" parent="plants"]
+position = Vector2(672, 808)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("4_nsomb")
+centered = false
+
+[node name="plant_2" type="Sprite2D" parent="plants"]
+position = Vector2(272, 808)
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("4_ra5tj")
+centered = false

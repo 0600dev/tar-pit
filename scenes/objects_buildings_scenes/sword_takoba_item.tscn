@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsolew14ef7e4"]
+
+[ext_resource type="Texture2D" uid="uid://joa2w4iyw2fb" path="res://sprites/objects_sprites/sword_takoba_tarpit.png" id="1_7luft"]
+
+[node name="sword_takoba" type="TextureButton"]
+texture_normal = ExtResource("1_7luft")

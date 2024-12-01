@@ -1,0 +1,100 @@
+~ temple_scene_start
+Statue: My offerings, gone...I didn't care for any of them, but one... and they took it
+do _timeout()
+Statue: Beast.
+Statue: Make your existence worthwhile.
+Statue: Get back my favorite offering.
+- Nod yes
+	Statue: Good... I will spare you for the time being
+	=> quest_accepted
+- Shake no
+	Statue: FOOLISH PARASITE, I GAVE YOU YOUR CHANCE!
+	do _on_death()
+	
+=> END
+
+~ quest_accepted
+Statue: Now, do what tar spirits do best. "Take over" the thieves to get back my offering
+- ?
+Statue: Ha! A tar spirit that doesn't know how to possess?
+Statue: Simply, get within range of the targets and click the z,x,c or 1,2,3 keys to alternate between you
+Statue: They could'nt have gone far, they're likely still up there in the desert
+do _timeout()
+
+Statue: Ah, when you have my offering click on the orb in my hand
+
+=> END
+
+~ questions
+- ???
+Statue: "What is it?", it has been so long, I can only vaguely recall...
+- ??
+	Statue: ... The shape? I believe a part of it was curved...
+	- ??
+		Statue: ... The color? I believe it was mostly brown...
+		- ??
+			Statue: ... Who took it? The thieves' faces were obscured but I believe I remember singing...
+			- Re-read
+				=> questions
+			
+=> END
+
+~ item_brought
+Statue: What have you brought?
+
+=> END
+
+~ wrong_item
+% Statue: Keeping you alive is my greatest mercy.
+% Statue: I was a fool to place hope in a tar spirit.
+	
+=> END
+
+~ right_item
+Statue: ...
+do _timeout()
+Statue: ...When people stopped showing up
+Statue: When dust acummulated and sand gathered in these four corners, this was my only reminder
+Statue: Of why I made this hell...
+do _timeout()
+Statue: Thank you tar spirit, it appears I was wrong
+Statue: Finally...finally...
+Statue: ...
+
+do _on_death()
+
+=> END
+
+~ desert_dialogue
+Kash: da de da da dumm~
+Kash: do de do do dumm~
+Captain: Please.
+Kash: di de di di dumm~
+Captain: We'll die here...
+Kash: Come now, you love this song, you were singing so beauitfully earlier 
+Captain: Take at least your life seriously...
+Kash: Would you like me to cry?
+Captain: ...
+Kash: Sorry, I'm sorry...
+Kash: It just does't look like we'll be making it out of this one...
+Kash: "Aye Captain"?
+Captain: ...
+
+do _timeout()
+
+~ kash_dialogue
+Kash: Lada dee dee do
+Kash: Lee de do dap de dap
+Kash: *tch* Complaining when he's the one who got stuck in my head...
+
+=> END 
+
+~ captain_dialogue
+Captain: It all happened so fast, the dunes rose so fast
+Captain: And the treasure...
+Captain: ...lost to the sand
+
+=> END
+
+
+=> END

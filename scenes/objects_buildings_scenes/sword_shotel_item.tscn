@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm35ab0ss2yko"]
+
+[ext_resource type="Texture2D" uid="uid://cbmw2l81on4on" path="res://sprites/objects_sprites/sword_shotel_tarpit.png" id="1_osd0l"]
+
+[node name="sword_shotel" type="TextureButton"]
+texture_normal = ExtResource("1_osd0l")

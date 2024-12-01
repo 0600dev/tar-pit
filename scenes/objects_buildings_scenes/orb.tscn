@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://n03wkrn5wfnq"]
+
+[ext_resource type="Texture2D" uid="uid://ct47xdjaw5rh2" path="res://sprites/ui_sprites/light_tex.png" id="1_g6v74"]
+[ext_resource type="Texture2D" uid="uid://b6j1otpdvjvtg" path="res://sprites/objects_sprites/orb_tarpit.png" id="1_h0nqv"]
+
+[node name="orb" type="Sprite2D"]
+texture = ExtResource("1_h0nqv")
+centered = false
+
+[node name="inner" type="PointLight2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(0.5, 0.5)
+color = Color(0.470588, 0.513726, 0.454902, 1)
+energy = 0.5
+texture = ExtResource("1_g6v74")
+
+[node name="outer" type="PointLight2D" parent="."]
+position = Vector2(16, 16)
+color = Color(0.470588, 0.513726, 0.454902, 1)
+energy = 0.32
+texture = ExtResource("1_g6v74")

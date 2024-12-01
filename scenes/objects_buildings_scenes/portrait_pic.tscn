@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://w6ebfwnpo6ju"]
+
+[ext_resource type="SpriteFrames" uid="uid://d25kpo1rd68lg" path="res://animation/portrait_pic.tres" id="1_nr4tk"]
+
+[node name="portrait_pic" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_nr4tk")
+animation = &"tar_spirit_idle"
+centered = false

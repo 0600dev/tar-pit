@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4hqufw20fkgj"]
+
+[ext_resource type="Script" path="res://scripts/objects_buildings_scripts/collectable.gd" id="1_ibf36"]
+
+[node name="collectable" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ibf36")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

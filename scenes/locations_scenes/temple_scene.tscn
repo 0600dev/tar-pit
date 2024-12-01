@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxmrato5nb66t"]
+
+[ext_resource type="Texture2D" uid="uid://dk88ng07r525v" path="res://sprites/locations/temple_tarpit.png" id="1_a68qm"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ssru4"]
+diffuse_texture = ExtResource("1_a68qm")
+
+[node name="temple_scene" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.2, 3.2)
+texture = SubResource("CanvasTexture_ssru4")
+centered = false

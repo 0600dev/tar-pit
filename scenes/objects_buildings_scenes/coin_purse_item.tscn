@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dobwjiexkgmaq"]
+
+[ext_resource type="Texture2D" uid="uid://mst3mq4d6q3q" path="res://sprites/objects_sprites/coin_purse_tarpit.png" id="1_lf66h"]
+
+[node name="coin_purse" type="TextureButton"]
+texture_normal = ExtResource("1_lf66h")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8s77t2pjmhgv"]
+
+[ext_resource type="AudioStream" uid="uid://fvqss3omf323" path="res://audio/756313__madgravitystudio__coronach (1).mp3" id="1_m258h"]
+
+[node name="background_music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_m258h")
+volume_db = 10.0
+autoplay = true

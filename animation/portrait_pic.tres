@@ -1,0 +1,45 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://d25kpo1rd68lg"]
+
+[ext_resource type="Texture2D" uid="uid://3jqqtqyq58xh" path="res://sprites/portraits/captain_avatar.png" id="1_3tm0l"]
+[ext_resource type="Texture2D" uid="uid://cvlwut8tjtkoc" path="res://sprites/portraits/kash_avatar.png" id="2_wprht"]
+[ext_resource type="Texture2D" uid="uid://drhjrjmbfwa5h" path="res://sprites/portraits/nothing_avatar.png" id="3_1b6ip"]
+[ext_resource type="Texture2D" uid="uid://dpg3gvlq7tfin" path="res://sprites/portraits/tar_spirit_avatar.png" id="4_5adon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eucfw"]
+atlas = ExtResource("4_5adon")
+region = Rect2(0, 0, 88, 136)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3tm0l")
+}],
+"loop": true,
+"name": &"captain",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wprht")
+}],
+"loop": true,
+"name": &"kash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1b6ip")
+}],
+"loop": true,
+"name": &"nothing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eucfw")
+}],
+"loop": true,
+"name": &"tar_spirit_idle",
+"speed": 5.0
+}]

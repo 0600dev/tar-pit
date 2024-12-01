@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr1yuf3jx3hul"]
+
+[ext_resource type="Texture2D" uid="uid://b6dvwhrudcvic" path="res://sprites/locations/desert_tarpit.png" id="1_pm7l4"]
+
+[node name="desert_scene" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("1_pm7l4")
+centered = false

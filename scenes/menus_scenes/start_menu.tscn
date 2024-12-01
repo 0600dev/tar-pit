@@ -1,0 +1,154 @@
+[gd_scene load_steps=10 format=3 uid="uid://bk6rqv47i54vo"]
+
+[ext_resource type="Script" path="res://scripts/menus_scripts/start_menu.gd" id="1_e7gxn"]
+[ext_resource type="Texture2D" uid="uid://bcweg4a4ypq8h" path="res://sprites/ui_sprites/start_menu_tarpit.png" id="2_icp72"]
+[ext_resource type="FontFile" uid="uid://c5cpkh6arrb4m" path="res://fonts/dubellay.ttf" id="2_y6dab"]
+[ext_resource type="Texture2D" uid="uid://bbkkh7qedhvh1" path="res://sprites/ui_sprites/buttons/button_2_tarpit.png" id="5_vi0sb"]
+[ext_resource type="Texture2D" uid="uid://dynh8woeeyffj" path="res://sprites/ui_sprites/buttons/pressed_button_2_tarpit.png" id="6_x36ks"]
+[ext_resource type="Texture2D" uid="uid://dvt42kkwsylvl" path="res://sprites/ui_sprites/buttons/button_3_tarpit.png" id="7_ai8nt"]
+[ext_resource type="Texture2D" uid="uid://ddnxn6dhac2vk" path="res://sprites/ui_sprites/buttons/pressed_button_3_tarpit.png" id="8_jbric"]
+[ext_resource type="Texture2D" uid="uid://cmx8p5n3wl8ju" path="res://sprites/ui_sprites/buttons/button_tarpit.png" id="9_wt4we"]
+[ext_resource type="Texture2D" uid="uid://d1y78q86efwom" path="res://sprites/ui_sprites/buttons/pressed_button_tarpit.png" id="10_igwn1"]
+
+[node name="start_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -17.0
+offset_bottom = -386.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e7gxn")
+
+[node name="BlankTarpit" type="Sprite2D" parent="."]
+scale = Vector2(3.2, 3.2)
+texture = ExtResource("2_icp72")
+centered = false
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.195
+offset_top = -151.0
+offset_right = 330.805
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.666667, 0.392157, 0.301961, 1)
+theme_override_fonts/font = ExtResource("2_y6dab")
+theme_override_font_sizes/font_size = 144
+text = "TAR PIT"
+horizontal_alignment = 1
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = 91.0
+offset_right = -59.5
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.2, 3.2)
+texture_normal = ExtResource("5_vi0sb")
+texture_pressed = ExtResource("6_x36ks")
+texture_hover = ExtResource("6_x36ks")
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.470588, 0.513726, 0.454902, 1)
+theme_override_fonts/font = ExtResource("2_y6dab")
+theme_override_font_sizes/font_size = 144
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.5
+offset_top = 347.0
+offset_right = -137.5
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.2, 3.2)
+theme_override_constants/separation = 30
+
+[node name="Volume" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_ai8nt")
+texture_pressed = ExtResource("8_jbric")
+texture_hover = ExtResource("8_jbric")
+
+[node name="Label" type="Label" parent="HBoxContainer/Volume"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 472.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.470588, 0.513726, 0.454902, 1)
+theme_override_fonts/font = ExtResource("2_y6dab")
+theme_override_font_sizes/font_size = 144
+text = "Volume
+On/Off"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_wt4we")
+texture_pressed = ExtResource("10_igwn1")
+texture_hover = ExtResource("10_igwn1")
+
+[node name="Label" type="Label" parent="HBoxContainer/Quit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.125
+offset_top = 10.0
+offset_right = 243.125
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.470588, 0.513726, 0.454902, 1)
+theme_override_fonts/font = ExtResource("2_y6dab")
+theme_override_font_sizes/font_size = 144
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]

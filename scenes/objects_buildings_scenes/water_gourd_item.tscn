@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn344kl4bkdgr"]
+
+[ext_resource type="Texture2D" uid="uid://1ipbbb3xanvi" path="res://sprites/objects_sprites/water_gourd_tarpit.png" id="1_c3qed"]
+
+[node name="water_gourd" type="TextureButton"]
+texture_normal = ExtResource("1_c3qed")

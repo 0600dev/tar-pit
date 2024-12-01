@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2pi2ycot5jej"]
+
+[ext_resource type="Texture2D" uid="uid://0fs8ugfs20qp" path="res://sprites/objects_sprites/paddle_doll_tarpit.png" id="1_lqidb"]
+
+[node name="paddle_doll" type="TextureButton"]
+texture_normal = ExtResource("1_lqidb")

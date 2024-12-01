@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fvqss3omf323"
+path="res://.godot/imported/756313__madgravitystudio__coronach (1).mp3-f6d54552d9565db1aa9ce993eb7e3904.mp3str"
+
+[deps]
+
+source_file="res://audio/756313__madgravitystudio__coronach (1).mp3"
+dest_files=["res://.godot/imported/756313__madgravitystudio__coronach (1).mp3-f6d54552d9565db1aa9ce993eb7e3904.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
