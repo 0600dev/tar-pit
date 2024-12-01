@@ -14,4 +14,3 @@ func _on_volume_pressed():
 func _on_quit_pressed():
 	# quit
 	get_tree().quit()
-
