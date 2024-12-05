@@ -14,7 +14,7 @@ enum Portraits {TAR_SPIRIT, KASH, CAPTAIN}
 @onready var sword_takoba = $CanvasGroup/inventory/items/sword_takoba
 @onready var water_gourd = $CanvasGroup/inventory/items/water_gourd
 # events
-@onready var orc_scene_change = $orb_scene_change
+
 # screenchange
 var is_fullscreen : bool = false
 @onready var fullscreen_button 

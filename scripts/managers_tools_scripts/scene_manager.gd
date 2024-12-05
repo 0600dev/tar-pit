@@ -18,8 +18,6 @@ enum Scenes {TEMPLE, DESERT, DESERT_ETC, CITY_CENTER, BARRACKS, BAKERY, SLUMS}
 @onready var arrow_sfx = $audio_manager/arrow_sfx
 # dialogue
 @export_category("Dialogue")
-@export var dialogue_resource : DialogueResource
-@export var dialogue_start : String = "start"
 var is_talking : bool = false
 # inputmap
 var kash_input

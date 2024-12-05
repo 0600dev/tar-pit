@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://duqbg1s22ey5j"]
+[gd_scene load_steps=15 format=3 uid="uid://duqbg1s22ey5j"]
 
 [ext_resource type="Script" path="res://scripts/managers_tools_scripts/game_manager.gd" id="1_6u6xc"]
 [ext_resource type="Texture2D" uid="uid://yelpgqh85t5" path="res://sprites/ui_sprites/new_background_ui_tarpit.png" id="3_5b1ne"]
@@ -12,10 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://w6ebfwnpo6ju" path="res://scenes/objects_buildings_scenes/portrait_pic.tscn" id="10_46p8o"]
 [ext_resource type="Texture2D" uid="uid://cp33wq04g4ey5" path="res://sprites/ui_sprites/new_portrait_tarpit.png" id="11_gtpdr"]
 [ext_resource type="Texture2D" uid="uid://bnokjgrw37lm6" path="res://sprites/ui_sprites/buttons/fullsceen_button.png" id="13_5rrev"]
-[ext_resource type="PackedScene" uid="uid://dxmrato5nb66t" path="res://scenes/locations_scenes/temple_scene.tscn" id="15_uag2c"]
-[ext_resource type="PackedScene" uid="uid://cr1yuf3jx3hul" path="res://scenes/locations_scenes/desert_scene.tscn" id="16_j1g2m"]
 [ext_resource type="Texture2D" uid="uid://btgw2q8ycsrby" path="res://sprites/ui_sprites/shotel_tarpit.png" id="16_rkfhn"]
-[ext_resource type="PackedScene" uid="uid://ckdw6bgpxc0fm" path="res://scenes/locations_scenes/desert_etc_scene.tscn" id="17_352p0"]
 [ext_resource type="Texture2D" uid="uid://42arx4mjgke0" path="res://sprites/ui_sprites/shotel_pressed_tarpit.png" id="17_acg0h"]
 
 [node name="game_manager" type="Node2D"]
@@ -94,27 +91,6 @@ centered = false
 [node name="game_container" type="CanvasLayer" parent="CanvasGroup"]
 layer = -2
 follow_viewport_enabled = true
-
-[node name="scenes" type="Control" parent="CanvasGroup/game_container"]
-z_index = 1
-layout_mode = 3
-anchors_preset = 0
-offset_left = 386.68
-offset_top = 51.0
-offset_right = 386.68
-offset_bottom = 51.0
-
-[node name="temple_scene" parent="CanvasGroup/game_container/scenes" instance=ExtResource("15_uag2c")]
-layout_mode = 1
-scale = Vector2(0.66, 0.66)
-
-[node name="desert_scene" parent="CanvasGroup/game_container/scenes" instance=ExtResource("16_j1g2m")]
-layout_mode = 1
-scale = Vector2(0.66, 0.66)
-
-[node name="desert_etc_scene" parent="CanvasGroup/game_container/scenes" instance=ExtResource("17_352p0")]
-layout_mode = 1
-scale = Vector2(0.66, 0.66)
 
 [node name="buttons" type="Control" parent="."]
 layout_mode = 3
