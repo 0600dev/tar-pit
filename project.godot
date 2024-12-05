@@ -21,7 +21,6 @@ buses/default_bus_layout="res://audio/default_bus_layout.tres"
 
 [autoload]
 
-DialogueStates="*res://dialogue/dialogue_states.gd"
 BackgroundMusic="*res://scenes/managers_tools_scenes/background_music.tscn"
 
 [dialogue_manager]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://duqbg1s22ey5j"]
+[gd_scene load_steps=18 format=3 uid="uid://duqbg1s22ey5j"]
 
 [ext_resource type="Script" path="res://scripts/managers_tools_scripts/game_manager.gd" id="1_6u6xc"]
 [ext_resource type="Texture2D" uid="uid://yelpgqh85t5" path="res://sprites/ui_sprites/new_background_ui_tarpit.png" id="3_5b1ne"]
@@ -14,7 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://bnokjgrw37lm6" path="res://sprites/ui_sprites/buttons/fullsceen_button.png" id="13_5rrev"]
 [ext_resource type="PackedScene" uid="uid://dxmrato5nb66t" path="res://scenes/locations_scenes/temple_scene.tscn" id="15_uag2c"]
 [ext_resource type="PackedScene" uid="uid://cr1yuf3jx3hul" path="res://scenes/locations_scenes/desert_scene.tscn" id="16_j1g2m"]
+[ext_resource type="Texture2D" uid="uid://btgw2q8ycsrby" path="res://sprites/ui_sprites/shotel_tarpit.png" id="16_rkfhn"]
 [ext_resource type="PackedScene" uid="uid://ckdw6bgpxc0fm" path="res://scenes/locations_scenes/desert_etc_scene.tscn" id="17_352p0"]
+[ext_resource type="Texture2D" uid="uid://42arx4mjgke0" path="res://sprites/ui_sprites/shotel_pressed_tarpit.png" id="17_acg0h"]
 
 [node name="game_manager" type="Node2D"]
 visibility_layer = 4
@@ -113,6 +115,58 @@ scale = Vector2(0.66, 0.66)
 [node name="desert_etc_scene" parent="CanvasGroup/game_container/scenes" instance=ExtResource("17_352p0")]
 layout_mode = 1
 scale = Vector2(0.66, 0.66)
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="left_arrow" type="TextureButton" parent="buttons"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 320.0
+offset_right = 528.0
+offset_bottom = 384.0
+texture_normal = ExtResource("16_rkfhn")
+texture_pressed = ExtResource("17_acg0h")
+texture_hover = ExtResource("17_acg0h")
+
+[node name="right_arrow" type="TextureButton" parent="buttons"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 320.0
+offset_right = 1216.0
+offset_bottom = 384.0
+texture_normal = ExtResource("16_rkfhn")
+texture_pressed = ExtResource("17_acg0h")
+texture_hover = ExtResource("17_acg0h")
+flip_h = true
+flip_v = true
+
+[node name="up_arrow" type="TextureButton" parent="buttons"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 64.0
+offset_right = 968.0
+offset_bottom = 128.0
+rotation = 1.5708
+texture_normal = ExtResource("16_rkfhn")
+texture_pressed = ExtResource("17_acg0h")
+texture_hover = ExtResource("17_acg0h")
+
+[node name="down_arrow" type="TextureButton" parent="buttons"]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 544.0
+offset_right = 958.0
+offset_bottom = 608.0
+rotation = 1.5708
+texture_normal = ExtResource("16_rkfhn")
+texture_pressed = ExtResource("17_acg0h")
+texture_hover = ExtResource("17_acg0h")
+flip_h = true
+flip_v = true
 
 [connection signal="pressed" from="CanvasGroup/inventory/items/coin_purse" to="." method="_on_coin_purse_pressed"]
 [connection signal="pressed" from="CanvasGroup/inventory/items/paddle_doll" to="." method="_on_paddle_doll_pressed"]
