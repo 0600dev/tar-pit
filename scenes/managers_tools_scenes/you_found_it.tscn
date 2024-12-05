@@ -39,7 +39,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.666667, 0.392157, 0.301961, 1)
 theme_override_fonts/font = ExtResource("2_awhvh")
 theme_override_font_sizes/font_size = 36
-text = "You Found Agbel's paddle doll and
- freed her from the statue."
+text = "You Found the Statue's Favorite Offering"
 horizontal_alignment = 1
 vertical_alignment = 1

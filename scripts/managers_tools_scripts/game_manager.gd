@@ -19,13 +19,20 @@ enum Portraits {TAR_SPIRIT, KASH, CAPTAIN}
 var dialogue_start : String = "start"
 # events
 @onready var orc_scene_change = $orb_scene_change
+# screenchange
+var is_fullscreen : bool = false
+@onready var fullscreen_button 
+@export_category("Screen Change")
+@export var fullscreen_texture : Texture2D
+@export var windowed_texture : Texture2D
 
 
-func _ready():
+
+func _ready() -> void:
 	# portrait animation
 	portrait_pic.play("nothing")
 	# first dialogue
-	DialogueManager.show_dialogue_balloon(dialogue_resource, "temple_scene_start")
+	#DialogueManager.show_dialogue_balloon(dialogue_resource, "temple_scene_start")
 	#item visibility
 	coin_purse.visible = false
 	paddle_doll.visible = false
@@ -33,7 +40,8 @@ func _ready():
 	sword_takoba.visible = false
 	water_gourd.visible = false
 	
-func _process(_delta):
+	
+func _process(_delta) -> void:
 	# quit to start menu on exit
 	if Input.is_action_pressed("escape"):
 		get_tree().change_scene_to_file("res://scenes/menus_scenes/start_menu.tscn")
@@ -47,7 +55,9 @@ func _process(_delta):
 	elif Input.is_action_just_pressed("captain"):
 		portrait = Portraits.CAPTAIN
 		
-	#
+	# fullscreen/minimize button change
+
+			
 	_portrait_state()
 		
 	
@@ -119,7 +129,7 @@ func _on_water_gourd_pressed():
 
 
 
-func _on_orb_scene_change_gui_input(event):	
+func _on_orb_scene_change_gui_input():	
 	# play "item brought" dialogue on play
 	if Input.is_action_just_pressed("interact"):
 	# make all buttons visible
@@ -130,4 +140,3 @@ func _on_orb_scene_change_gui_input(event):
 		water_gourd.visible = true	
 	# play "item brought" dialogue on play	
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "item_brought")
-	
