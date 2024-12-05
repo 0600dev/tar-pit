@@ -123,8 +123,6 @@ func _on_sword_takoba_pressed():
 func _on_water_gourd_pressed():
 	water_gourd.self_modulate.a = 0
 	#
-	
-	#
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "wrong_item")
 
 
