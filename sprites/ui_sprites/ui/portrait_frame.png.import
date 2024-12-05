@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp33wq04g4ey5"
-path="res://.godot/imported/new_portrait_tarpit.png-c5f0c823ecbdc838b8571ccab3d6c99d.ctex"
+uid="uid://tvl5aq35vu6l"
+path="res://.godot/imported/portrait_frame.png-f7e1ba3f599a430e00e4d07388397f4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/new_portrait_tarpit.png"
-dest_files=["res://.godot/imported/new_portrait_tarpit.png-c5f0c823ecbdc838b8571ccab3d6c99d.ctex"]
+source_file="res://sprites/ui_sprites/ui/portrait_frame.png"
+dest_files=["res://.godot/imported/portrait_frame.png-f7e1ba3f599a430e00e4d07388397f4f.ctex"]
 
 [params]
 

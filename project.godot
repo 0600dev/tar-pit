@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tarpit"
-run/main_scene="res://scenes/menus_scenes/start_menu.tscn"
+run/main_scene="res://scenes/managers_tools_scenes/game_manager.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://sprites/placeholder/icon.svg"
 
@@ -41,7 +41,7 @@ project/assembly_name="tarpit_purchase"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [filesystem]
 

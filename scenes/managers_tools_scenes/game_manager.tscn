@@ -1,19 +1,19 @@
 [gd_scene load_steps=15 format=3 uid="uid://duqbg1s22ey5j"]
 
 [ext_resource type="Script" path="res://scripts/managers_tools_scripts/game_manager.gd" id="1_6u6xc"]
-[ext_resource type="Texture2D" uid="uid://yelpgqh85t5" path="res://sprites/ui_sprites/new_background_ui_tarpit.png" id="3_5b1ne"]
-[ext_resource type="Texture2D" uid="uid://bvpuk8aqmckeo" path="res://sprites/ui_sprites/new_inventory_tarpit.png" id="4_1bhyj"]
+[ext_resource type="Texture2D" uid="uid://cvx7qnv1btcor" path="res://sprites/ui_sprites/ui/background.png" id="4_mju0g"]
 [ext_resource type="Texture2D" uid="uid://c1bluip6ri835" path="res://sprites/ui_sprites/buttons/normalscreen_button.png" id="4_tryvd"]
 [ext_resource type="PackedScene" uid="uid://dobwjiexkgmaq" path="res://scenes/objects_buildings_scenes/coin_purse_item.tscn" id="5_snvn0"]
+[ext_resource type="Texture2D" uid="uid://sxsqlxwc7aln" path="res://sprites/ui_sprites/ui/inventory.png" id="5_yalku"]
 [ext_resource type="PackedScene" uid="uid://b2pi2ycot5jej" path="res://scenes/objects_buildings_scenes/paddle_doll_item.tscn" id="6_htwea"]
 [ext_resource type="PackedScene" uid="uid://bm35ab0ss2yko" path="res://scenes/objects_buildings_scenes/sword_shotel_item.tscn" id="7_jlcil"]
 [ext_resource type="PackedScene" uid="uid://dsolew14ef7e4" path="res://scenes/objects_buildings_scenes/sword_takoba_item.tscn" id="8_j4hht"]
 [ext_resource type="PackedScene" uid="uid://cn344kl4bkdgr" path="res://scenes/objects_buildings_scenes/water_gourd_item.tscn" id="9_hj15s"]
 [ext_resource type="PackedScene" uid="uid://w6ebfwnpo6ju" path="res://scenes/objects_buildings_scenes/portrait_pic.tscn" id="10_46p8o"]
-[ext_resource type="Texture2D" uid="uid://cp33wq04g4ey5" path="res://sprites/ui_sprites/new_portrait_tarpit.png" id="11_gtpdr"]
+[ext_resource type="Texture2D" uid="uid://bntuyic42f6k" path="res://sprites/ui_sprites/ui/dialogue.png" id="11_mvwgf"]
 [ext_resource type="Texture2D" uid="uid://bnokjgrw37lm6" path="res://sprites/ui_sprites/buttons/fullsceen_button.png" id="13_5rrev"]
-[ext_resource type="Texture2D" uid="uid://btgw2q8ycsrby" path="res://sprites/ui_sprites/shotel_tarpit.png" id="16_rkfhn"]
-[ext_resource type="Texture2D" uid="uid://42arx4mjgke0" path="res://sprites/ui_sprites/shotel_pressed_tarpit.png" id="17_acg0h"]
+[ext_resource type="Texture2D" uid="uid://tvl5aq35vu6l" path="res://sprites/ui_sprites/ui/portrait_frame.png" id="13_k7my8"]
+[ext_resource type="Texture2D" uid="uid://bakir52wodbb3" path="res://sprites/ui_sprites/ui/game_container.png" id="14_2m4ld"]
 
 [node name="game_manager" type="Node2D"]
 visibility_layer = 4
@@ -27,122 +27,76 @@ windowed_texture = ExtResource("4_tryvd")
 layer = -2
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/background"]
-scale = Vector2(3.2, 3.2)
-texture = ExtResource("3_5b1ne")
+texture = ExtResource("4_mju0g")
 centered = false
 
 [node name="inventory" type="CanvasLayer" parent="CanvasGroup"]
 layer = -2
 
 [node name="carpet" type="Sprite2D" parent="CanvasGroup/inventory"]
-scale = Vector2(3.2, 3.2)
-texture = ExtResource("4_1bhyj")
+texture = ExtResource("5_yalku")
 centered = false
 
 [node name="items" type="Node2D" parent="CanvasGroup/inventory" groups=["items"]]
 
 [node name="coin_purse" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("5_snvn0")]
-offset_left = 96.0
-offset_top = 600.0
-offset_right = 157.0
-offset_bottom = 645.0
+offset_left = 124.199
+offset_top = 585.145
+offset_right = 185.199
+offset_bottom = 630.145
 
 [node name="paddle_doll" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("6_htwea")]
-offset_left = 213.0
-offset_top = 592.0
-offset_right = 283.0
-offset_bottom = 692.0
+offset_left = 241.199
+offset_top = 577.145
+offset_right = 311.199
+offset_bottom = 677.145
 rotation = -0.628319
 
 [node name="sword_shotel" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("7_jlcil")]
-offset_left = 96.0
-offset_top = 728.0
-offset_right = 233.0
-offset_bottom = 799.0
+offset_left = 124.199
+offset_top = 713.145
+offset_right = 261.199
+offset_bottom = 784.145
 rotation = 0.671952
 
 [node name="sword_takoba" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("8_j4hht")]
-offset_left = 248.0
-offset_top = 720.0
-offset_right = 303.0
-offset_bottom = 861.0
+offset_left = 276.199
+offset_top = 705.145
+offset_right = 331.199
+offset_bottom = 846.145
 
 [node name="water_gourd" parent="CanvasGroup/inventory/items" groups=["items"] instance=ExtResource("9_hj15s")]
-offset_left = 168.0
-offset_top = 672.0
-offset_right = 210.0
-offset_bottom = 729.0
+offset_left = 196.199
+offset_top = 657.145
+offset_right = 238.199
+offset_bottom = 714.145
 
 [node name="dialogue" type="CanvasLayer" parent="CanvasGroup"]
 layer = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/dialogue"]
+texture = ExtResource("11_mvwgf")
+centered = false
 
 [node name="portrait" type="CanvasLayer" parent="CanvasGroup"]
 layer = -2
 
 [node name="portrait_pic" parent="CanvasGroup/portrait" instance=ExtResource("10_46p8o")]
+visible = false
 position = Vector2(51.075, 51.37)
 scale = Vector2(3.198, 3.197)
 
 [node name="portrait_frame" type="Sprite2D" parent="CanvasGroup/portrait"]
-scale = Vector2(3.2, 3.2)
-texture = ExtResource("11_gtpdr")
+texture = ExtResource("13_k7my8")
 centered = false
 
 [node name="game_container" type="CanvasLayer" parent="CanvasGroup"]
 layer = -2
 follow_viewport_enabled = true
 
-[node name="buttons" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="left_arrow" type="TextureButton" parent="buttons"]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 320.0
-offset_right = 528.0
-offset_bottom = 384.0
-texture_normal = ExtResource("16_rkfhn")
-texture_pressed = ExtResource("17_acg0h")
-texture_hover = ExtResource("17_acg0h")
-
-[node name="right_arrow" type="TextureButton" parent="buttons"]
-layout_mode = 0
-offset_left = 1088.0
-offset_top = 320.0
-offset_right = 1216.0
-offset_bottom = 384.0
-texture_normal = ExtResource("16_rkfhn")
-texture_pressed = ExtResource("17_acg0h")
-texture_hover = ExtResource("17_acg0h")
-flip_h = true
-flip_v = true
-
-[node name="up_arrow" type="TextureButton" parent="buttons"]
-layout_mode = 0
-offset_left = 840.0
-offset_top = 64.0
-offset_right = 968.0
-offset_bottom = 128.0
-rotation = 1.5708
-texture_normal = ExtResource("16_rkfhn")
-texture_pressed = ExtResource("17_acg0h")
-texture_hover = ExtResource("17_acg0h")
-
-[node name="down_arrow" type="TextureButton" parent="buttons"]
-layout_mode = 0
-offset_left = 830.0
-offset_top = 544.0
-offset_right = 958.0
-offset_bottom = 608.0
-rotation = 1.5708
-texture_normal = ExtResource("16_rkfhn")
-texture_pressed = ExtResource("17_acg0h")
-texture_hover = ExtResource("17_acg0h")
-flip_h = true
-flip_v = true
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup/game_container"]
+texture = ExtResource("14_2m4ld")
+centered = false
 
 [connection signal="pressed" from="CanvasGroup/inventory/items/coin_purse" to="." method="_on_coin_purse_pressed"]
 [connection signal="pressed" from="CanvasGroup/inventory/items/paddle_doll" to="." method="_on_paddle_doll_pressed"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btgw2q8ycsrby"
-path="res://.godot/imported/shotel_tarpit.png-82dbe064fa7938775f5a3d73e7816e55.ctex"
+path="res://.godot/imported/shotel_tarpit.png-1f22ae752a48e0ba2411a5882dccf256.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/shotel_tarpit.png"
-dest_files=["res://.godot/imported/shotel_tarpit.png-82dbe064fa7938775f5a3d73e7816e55.ctex"]
+source_file="res://sprites/ui_sprites/buttons/shotel_tarpit.png"
+dest_files=["res://.godot/imported/shotel_tarpit.png-1f22ae752a48e0ba2411a5882dccf256.ctex"]
 
 [params]
 

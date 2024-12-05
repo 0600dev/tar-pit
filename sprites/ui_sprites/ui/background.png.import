@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://42arx4mjgke0"
-path="res://.godot/imported/shotel_pressed_tarpit.png-bd5330350ef059a5fcd3bbcd6153eb6a.ctex"
+uid="uid://cvx7qnv1btcor"
+path="res://.godot/imported/background.png-82ea958c7e4107f0bf89895a5fe39fc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/shotel_pressed_tarpit.png"
-dest_files=["res://.godot/imported/shotel_pressed_tarpit.png-bd5330350ef059a5fcd3bbcd6153eb6a.ctex"]
+source_file="res://sprites/ui_sprites/ui/background.png"
+dest_files=["res://.godot/imported/background.png-82ea958c7e4107f0bf89895a5fe39fc4.ctex"]
 
 [params]
 

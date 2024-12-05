@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oey2n0h5djjs"
-path="res://.godot/imported/new_new_dialogue_tarpit.png-44855d01af8f9add17d9d21226582c93.ctex"
+uid="uid://42arx4mjgke0"
+path="res://.godot/imported/shotel_pressed_tarpit.png-2d69ef5fec28a12b2091ef2b607f15c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/new_new_dialogue_tarpit.png"
-dest_files=["res://.godot/imported/new_new_dialogue_tarpit.png-44855d01af8f9add17d9d21226582c93.ctex"]
+source_file="res://sprites/ui_sprites/buttons/shotel_pressed_tarpit.png"
+dest_files=["res://.godot/imported/shotel_pressed_tarpit.png-2d69ef5fec28a12b2091ef2b607f15c3.ctex"]
 
 [params]
 

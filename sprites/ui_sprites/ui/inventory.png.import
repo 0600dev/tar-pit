@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crsunndsqajjo"
-path="res://.godot/imported/new_game_container_tarpit.png-92aad8f7ac9066955acfa4417641e58c.ctex"
+uid="uid://sxsqlxwc7aln"
+path="res://.godot/imported/inventory.png-606020263c8d62ab47218aac51215d7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/new_game_container_tarpit.png"
-dest_files=["res://.godot/imported/new_game_container_tarpit.png-92aad8f7ac9066955acfa4417641e58c.ctex"]
+source_file="res://sprites/ui_sprites/ui/inventory.png"
+dest_files=["res://.godot/imported/inventory.png-606020263c8d62ab47218aac51215d7c.ctex"]
 
 [params]
 

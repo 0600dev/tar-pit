@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg7000mmerqww"
-path="res://.godot/imported/new_dialogue_tarpit.png-00cd0f9adf9c8ccd4249d13fe7865655.ctex"
+uid="uid://bntuyic42f6k"
+path="res://.godot/imported/dialogue.png-985e6213fc862e87671cd29d505c700c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui_sprites/new_dialogue_tarpit.png"
-dest_files=["res://.godot/imported/new_dialogue_tarpit.png-00cd0f9adf9c8ccd4249d13fe7865655.ctex"]
+source_file="res://sprites/ui_sprites/ui/dialogue.png"
+dest_files=["res://.godot/imported/dialogue.png-985e6213fc862e87671cd29d505c700c.ctex"]
 
 [params]
 
